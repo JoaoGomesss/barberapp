@@ -150,6 +150,7 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
   }
 
   const timeList = useMemo(() => {
+    if (!selectedDay) return []
     return getTimeList({
       bookings: dayBookings,
       selectedDay,
